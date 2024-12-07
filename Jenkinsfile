@@ -33,4 +33,14 @@ pipeline{
             }
         }
     }
+    post{
+        success{
+            //This will be executed if the pipeline execution is successful
+            echo 'Pipeline executed successfully!'
+        }
+        failure{
+            //This will be executed if the pipeline execution fails
+            echo 'Pipeline failed!'
+        }
+    }
 }
