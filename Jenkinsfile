@@ -36,10 +36,12 @@ pipeline{
     post{
         success{
             //This will be executed if the pipeline execution is successful
+            slackSend channel: 'devops-learning', message: 'Pipeline executed successfully!'
             echo 'Pipeline executed successfully!'
         }
         failure{
             //This will be executed if the pipeline execution fails
+            slackSend channel: 'devops-learning', message: 'Pipeline failed!'
             echo 'Pipeline failed!'
         }
     }
