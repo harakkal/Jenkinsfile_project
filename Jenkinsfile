@@ -4,7 +4,7 @@ pipeline{
     tools{
         // here mymaven is tool configured under global tool configuration
         // new tools added
-        maven 'mymaven'
+        maven 'maven_3.9.8'
     }
     stages{ 
         stage('Clone repo') {
