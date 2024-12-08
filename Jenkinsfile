@@ -9,7 +9,8 @@ pipeline{
     stages{ 
         stage('Clone repo') {
             steps{            
-                git 'https://github.com/abhijithvg/simple-java-maven-app.git'
+              //  git 'https://github.com/abhijithvg/simple-java-maven-app.git'
+                git 'https://github.com/harakkal/simple-java-maven-app.git'
             }
         }
         stage('Compile Code') {
@@ -36,7 +37,7 @@ pipeline{
     post{
         success{
             //This will be executed if the pipeline execution is successful
-            slackSend channel: 'devops-learning', message: 'Pipeline executed successfully!'
+            slackSend channel: 'devops-learning', message: 'Pipeline executed successfully (msg from JenkinsfileProjectDemo)!'
             echo 'Pipeline executed successfully!'
         }
         failure{
