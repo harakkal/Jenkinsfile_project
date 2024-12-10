@@ -4,7 +4,7 @@ pipeline{
     tools{
         // here mymaven is tool configured under global tool configuration
         // new tools added
-        maven 'local_Maven'
+        maven 'local_maven'
     }
     stages{ 
         stage('Clone repo') {
@@ -37,7 +37,7 @@ pipeline{
     post{
         success{
             //This will be executed if the pipeline execution is successful
-            slackSend channel: 'devops-learning', message: 'Pipeline executed successfully (msg from JenkinsfileProjectDemo)!'
+            slackSend channel: 'devops-learning', message: 'Pipeline executed successfully (msg from [9 - SCMPipelineDemo])!'
             echo 'Pipeline executed successfully!'
         }
         failure{
